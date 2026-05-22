@@ -1,0 +1,84 @@
+fundo_sorte.png
+produtos.png	50	100
+45	3
+
+<slot>
+CS	prateleira_slot.png
+CAd	slot	1
+166	400	61	3	160	0	16	60
+P18,P18,P30,_,P39,_,P28,_,P23,_,P28,P33,P33,P32,P8
+
+<slot>
+CS	prateleira_slot.png
+CAd	slot	1
+422	400	61	3	160	0	16	60
+_,P31,P31,P10,P10,_,_,P28,P5,P2,_,P14,P11,P32,_
+
+<slot>
+CS	prateleira_slot.png
+CAd	slot	1
+678	400	61	3	160	0	16	60
+P9,P4,P4,P3,P21,_,_,P29,P9,_,P14,P35,P34,_,P15
+
+<simples>
+CS	prateleira1.png
+80	235	61	3
+P22,P19,P22,P24,P25,_,_,P26,P43
+<simples>
+CS	prateleira1.png
+251	235	61	3
+P19,P16,P25,P17,_,P17,_,P31,_
+<simples>
+CS	prateleira1.png
+422	235	61	3
+P16,P22,P26,_,P17,_,P24,P25,P36,P42,_,_
+<simples>
+CS	prateleira1.png
+593	235	61	3
+P10,P23,P27,P33,_,P26,_,P32,P45,P43,P43,P44
+<simples>
+CS	prateleira1.png
+764	235	61	3
+P1,P1,P24,P16,P7,P7,P45,P45,_
+
+<simples>
+CS	prateleira1.png
+80	120	61	3
+P12,P11,P13,P20,P20,P21,P42,_,_
+<simples>
+CS	prateleira1.png
+251	120	61	3
+_,P1,_,P20,_,P3,P21,P14,P15
+<simples>
+CS	prateleira1.png
+422	120	61	3
+P18,P30,P30,P15,_,P19,_,P29,P42
+<simples>
+CS	prateleira1.png
+593	120	61	3
+P2,_,P3,P4,P5,P6,_,P44,_
+<simples>
+CS	prateleira1.png
+764	120	61	3
+P12,P12,P13,P37,P23,_,_,P44,_
+
+<simples>
+CS	prateleira1.png
+80	5	61	3
+P5,P40,P40,P7,_,P6,_,P8,_,P41,_,_
+<simples>
+CS	prateleira1.png
+251	5	61	3
+P39,P39,P13,_,P9,P11,P41,_,_
+<simples>
+CS	prateleira1.png
+422	5	61	3
+P2,P38,P37,P41,P38,_,_,P35,P37
+<simples>
+CS	prateleira1.png
+593	5	61	3
+P27,P34,P34,_,P36,_,_,P40,P38
+<simples>
+CS	prateleira1.png
+764	5	61	3
+P35,P27,P36,_,P6,P8,P29,_,_

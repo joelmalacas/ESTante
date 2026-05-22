@@ -1,0 +1,101 @@
+fundo_bananas.jpg
+produtos.png	50	100
+35	3
+
+<porta>
+CS	prateleira1.png
+CMA	prateleira_porta.png	4	4	3
+221	125	61	3	60	60	aberta	10
+P15,P4,_,_,P35,P35
+<porta>
+CS	prateleira1.png
+CMA	prateleira_porta.png	4	4	3
+392	125	61	3	60	60	aberta	20
+P29,P19,P15,_,P17,P18,P35,_,_
+<porta>
+CS	prateleira1.png
+CMA	prateleira_porta.png	4	4	3
+563	125	61	3	60	60	aberta	30
+P19,P2,P8,P18,P17,_,_,_,P26
+
+<porta>
+CS	prateleira1.png
+CMA	prateleira_porta.png	4	4	3
+221	10	61	3	60	60	aberta	60
+P5,_,P3,P8,P9,P9,P26,_,_
+<porta>
+CS	prateleira1.png
+CMA	prateleira_porta.png	4	4	3
+392	10	61	3	60	60	aberta	50
+P20,_,P20,_,P13,P14,_,P26,P32
+<porta>
+CS	prateleira1.png
+CMA	prateleira_porta.png	4	4	3
+563	10	61	3	60	60	aberta	40
+P10,_,P9,_,P12,P14,P33,_,_
+
+<movel>
+CS	prateleira1.png
+0	300	61	3	1400	300	-200	300	-1	0	2.5
+P20,P3,_,_,P16,P16,_,P27,_
+<movel>
+CS	prateleira1.png
+200	300	61	3	1400	300	-200	300	-1	0	2.5
+P10,_,P10,P34,P16,P28
+<movel>
+CS	prateleira1.png
+400	300	61	3	1400	300	-200	300	-1	0	2.5
+P15,P2,_,P19,P34,P17,_,_,P28
+<movel>
+CS	prateleira1.png
+600	300	61	3	1400	300	-200	300	-1	0	2.5
+P8,P11,_,P3,P34,P4
+<movel>
+CS	prateleira1.png
+800	300	61	3	1400	300	-200	300	-1	0	2.5
+P1,_,P2,P4,P5,P5
+<movel>
+CS	prateleira1.png
+1000	300	61	3	1400	300	-200	300	-1	0	2.5
+P1,P11,P28,
+<movel>
+CS	prateleira1.png
+1200	300	61	3	1400	300	-200	300	-1	0	2.5
+P1,_,P12,P11,P13,_
+<movel>
+CS	prateleira1.png
+1400	300	61	3	1400	300	-200	300	-1	0	2.5
+P13,P12,P29
+
+<movel>
+CS	prateleira1.png
+-400	450	61	3	-200	450	1400	450	1	0	2.5
+P21,P14,P18,_,P27,_,P30,P30,_
+<movel>
+CS	prateleira1.png
+-200	450	61	3	-200	450	1400	450	1	0	2.5
+P21,P23,P7,_,P27,_,_,P30,_
+<movel>
+CS	prateleira1.png
+0	450	61	3	-200	450	1400	450	1	0	2.5
+P21,P7,P23,P31,P31,_
+<movel>
+CS	prateleira1.png
+200	450	61	3	-200	450	1400	450	1	0	2.5
+P22,P24,P22
+<movel>
+CS	prateleira1.png
+400	450	61	3	-200	450	1400	450	1	0	2.5
+P23,P24,_,P22,_,P31
+<movel>
+CS	prateleira1.png
+600	450	61	3	-200	450	1400	450	1	0	2.5
+P25,P24,P6
+<movel>
+CS	prateleira1.png
+800	450	61	3	-200	450	1400	450	1	0	2.5
+P25,_,P7,P32,P6,P32
+<movel>
+CS	prateleira1.png
+1000	450	61	3	-200	450	1400	450	1	0	2.5
+P25,P6,P29,_,P33,P33

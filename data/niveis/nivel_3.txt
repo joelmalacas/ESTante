@@ -1,0 +1,95 @@
+fundo3.jpg
+produtos.png	50	100
+25	3
+
+<simples>
+CS	prateleira1.png
+221	125	61	3
+P15,P4,_
+<simples>
+CS	prateleira1.png
+392	125	61	3
+_,P19,P15,_,P17,P18
+<simples>
+CS	prateleira1.png
+563	125	61	3
+P19,P2,P8,P18,P17,_
+
+<simples>
+CS	prateleira1.png
+221	10	61	3
+P5,_,P3,P8,P9,P9
+<simples>
+CS	prateleira1.png
+392	10	61	3
+P20,_,P20,_,P13,P14
+<simples>
+CS	prateleira1.png
+563	10	61	3
+P10,_,P9,_,P12,P14
+
+<movel>
+CS	prateleira1.png
+0	300	61	3	1400	300	-200	300	-1	0	2.5
+P20,P3,_,_,P16,P16
+<movel>
+CS	prateleira1.png
+200	300	61	3	1400	300	-200	300	-1	0	2.5
+P10,_,P10,_,P16,_
+<movel>
+CS	prateleira1.png
+400	300	61	3	1400	300	-200	300	-1	0	2.5
+P15,P2,_,P19,_,P17
+<movel>
+CS	prateleira1.png
+600	300	61	3	1400	300	-200	300	-1	0	2.5
+P8,P11,_,P3,_,P4
+<movel>
+CS	prateleira1.png
+800	300	61	3	1400	300	-200	300	-1	0	2.5
+P1,_,P2,P4,P5,P5
+<movel>
+CS	prateleira1.png
+1000	300	61	3	1400	300	-200	300	-1	0	2.5
+P1,P11,_,
+<movel>
+CS	prateleira1.png
+1200	300	61	3	1400	300	-200	300	-1	0	2.5
+P1,_,P12,P11,P13,_
+<movel>
+CS	prateleira1.png
+1400	300	61	3	1400	300	-200	300	-1	0	2.5
+P13,P12,_
+
+<movel>
+CS	prateleira1.png
+-400	450	61	3	-200	450	1400	450	1	0	2.5
+P21,P14,P18
+<movel>
+CS	prateleira1.png
+-200	450	61	3	-200	450	1400	450	1	0	2.5
+P21,P23,P7
+<movel>
+CS	prateleira1.png
+0	450	61	3	-200	450	1400	450	1	0	2.5
+P21,P7,P23
+<movel>
+CS	prateleira1.png
+200	450	61	3	-200	450	1400	450	1	0	2.5
+P22,P24,P22
+<movel>
+CS	prateleira1.png
+400	450	61	3	-200	450	1400	450	1	0	2.5
+P23,P24,_,P22,_,_
+<movel>
+CS	prateleira1.png
+600	450	61	3	-200	450	1400	450	1	0	2.5
+P25,P24,P6
+<movel>
+CS	prateleira1.png
+800	450	61	3	-200	450	1400	450	1	0	2.5
+P25,_,P7,_,P6,_
+<movel>
+CS	prateleira1.png
+1000	450	61	3	-200	450	1400	450	1	0	2.5
+P25,P6,_

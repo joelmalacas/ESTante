@@ -1,0 +1,99 @@
+fundo_java.png
+produtos.png	50	100
+40	3
+
+<simples>
+CS	prateleira1.png
+80	465	61	3
+P31,P33,P28,_,P33,_,_,P35,P34
+<simples>
+CS	prateleira1.png
+251	465	61	3
+P18,P30,P30,P15,_,P19
+<simples>
+CS	prateleira1.png
+422	465	61	3
+P32,P2,P3,P14,P15,_
+<simples>
+CS	prateleira1.png
+593	465	61	3
+P10,P32,P14,P29,P29,_
+<simples>
+CS	prateleira1.png
+764	465	61	3
+P32,P33,P29,_,_,P11,_,P8,_
+
+<sequencial>
+CS	porta.png
+3	2	-1	
+CS	prateleira1.png
+251	350	61	3
+P18,P18,P30,_,P39,_,P28,_,P23
+CS	prateleira1.png
+422	350	61	3
+_,P31,P31,P10,P10,_,_,P28,P5
+CS	prateleira1.png
+593	350	61	3
+P9,P4,P4,_,P21,_,_,_,P9
+
+<simples>
+CS	prateleira1.png
+80	235	61	3
+P22,P19,P22,P24,P25,_,_,P26,_
+<simples>
+CS	prateleira1.png
+251	235	61	3
+P19,P16,P25,P17,_,P17
+<simples>
+CS	prateleira1.png
+422	235	61	3
+P16,P22,P26,_,P17,_,P24,P25,P36
+<simples>
+CS	prateleira1.png
+593	235	61	3
+P23,P23,P27,_,_,P26
+<simples>
+CS	prateleira1.png
+764	235	61	3
+P1,P1,P24,P16,P7,P7
+
+<sequencial>
+CS	porta.png
+2	0	1	
+CS	prateleira1.png
+80	120	61	3
+P12,P11,P13,P20,P20,P21
+CS	prateleira1.png
+251	120	61	3
+_,P1,_,P20,_,P3,P21,P14,P15
+
+<sequencial>
+CS	porta.png
+2	1	-1	
+CS	prateleira1.png
+593	120	61	3
+P2,_,P3,P4,P5,P6
+CS	prateleira1.png
+764	120	61	3
+P12,P12,P13,P37,_,_
+
+<simples>
+CS	prateleira1.png
+80	5	61	3
+P5,P40,P40,P7,_,P6,_,P8,_
+<simples>
+CS	prateleira1.png
+251	5	61	3
+P39,P39,P13,_,P9,P11
+<simples>
+CS	prateleira1.png
+422	5	61	3
+P2,P38,P37,_,P38,_,_,P35,P37
+<simples>
+CS	prateleira1.png
+593	5	61	3
+P27,P34,P34,_,P36,_,_,P40,P38
+<simples>
+CS	prateleira1.png
+764	5	61	3
+P35,P27,P36,_,P6,P8

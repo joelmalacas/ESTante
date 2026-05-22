@@ -1,0 +1,115 @@
+fundo_gelo.jpg
+produtos.png	50	100
+30	3
+
+<congeladora>
+CS	prateleira_gelo.png
+CS	gelo.png
+221	10	61	3
+_,P1,_,P5,_,_,_,_,P7
+<congeladora>
+CS	prateleira_gelo.png
+CS	gelo.png
+392	10	61	3
+_,P30,_,_,P10,_
+
+<simples>
+CS	prateleira1.png
+221	430	61	3
+P11,_,P18,_,_,P21
+<simples>
+CS	prateleira1.png
+392	430	61	3
+P11,_,P7,P12,_,_
+
+<simples>
+CS	prateleira1.png
+221	315	61	3
+P4,P22,_,P9,_,P29
+<simples>
+CS	prateleira1.png
+392	315	61	3
+P17,P23,_,_,P19,_
+
+<simples>
+CS	prateleira1.png
+221	200	61	3
+P30,P26,P9,_,P1,_
+<simples>
+CS	prateleira1.png
+392	200	61	3
+P20,_,P20,_,P24,P24
+
+<movel>
+CS	prateleira1.png
+20	0	61	3	20	1200	20	-150	0	-1	2.5
+P10,P10,P9,P22,_,_
+<movel>
+CS	prateleira1.png
+20	150	61	3	20	1200	20	-150	0	-1	2.5
+P20,_,P22,_,P18,P15,P26,_,_
+<movel>
+CS	prateleira1.png
+20	300	61	3	20	1200	20	-150	0	-1	2.5
+P21,P1,P11,P17,_,_
+<movel>
+CS	prateleira1.png
+20	450	61	3	20	1200	20	-150	0	-1	2.5
+P2,P3,P4,_,P27,_
+<movel>
+CS	prateleira1.png
+20	600	61	3	20	1200	20	-150	0	-1	2.5
+P2,_,P13,_,_,P28
+<movel>
+CS	prateleira1.png
+20	750	61	3	20	1200	20	-150	0	-1	2.5
+P5,P5,P2,P14,P23,_
+<movel>
+CS	prateleira1.png
+20	900	61	3	20	1200	20	-150	0	-1	2.5
+P6,P16,P15
+<movel>
+CS	prateleira1.png
+20	1050	61	3	20	1200	20	-150	0	-1	2.5
+P21,P6,_,_,P8,_
+<movel>
+CS	prateleira1.png
+20	1200	61	3	20	1200	20	-150	0	-1	2.5
+P25,_,P14,_,P27,_
+
+<movel>
+CS	prateleira1.png
+590	-150	61	3	590	-150	590	1200	0	1	2.5
+P3,_,P24,P13,_,_
+<movel>
+CS	prateleira1.png
+590	0	61	3	590	-150	590	1200	0	1	2.5
+P4,P3,_,_,P29,_
+<movel>
+CS	prateleira1.png
+590	150	61	3	590	-150	590	1200	0	1	2.5
+P16,P23,P18,P19,P29,_
+<movel>
+CS	prateleira1.png
+590	300	61	3	590	-150	590	1200	0	1	2.5
+P30,P16,P17
+<movel>
+CS	prateleira1.png
+590	450	61	3	590	-150	590	1200	0	1	2.5
+P27,P19,P7,P28,_,_
+<movel>
+CS	prateleira1.png
+590	600	61	3	590	-150	590	1200	0	1	2.5
+P12,P25,_
+<movel>
+CS	prateleira1.png
+590	750	61	3	590	-150	590	1200	0	1	2.5
+P12,_,P6,_,P25,_
+<movel>
+CS	prateleira1.png
+590	900	61	3	590	-150	590	1200	0	1	2.5
+P8,P8,_,P26,_,P28
+<movel>
+CS	prateleira1.png
+590	1050	61	3	590	-150	590	1200	0	1	2.5
+P13,P14,P15

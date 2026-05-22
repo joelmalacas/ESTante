@@ -1,0 +1,77 @@
+fundo2.jpg
+produtos.png	50	100
+25	3
+
+<simples>
+CS	prateleira1.png
+50	240	61	3
+P8,P9,P10,P14,P14,P13
+<simples>
+CS	prateleira1.png
+221	240	61	3
+P8,P15,P16,P19,P17,P6
+
+<esgotavel>
+CS	prateleira2.png
+CMA	prateleira_porta.png	4	4	3
+392	240	37	1
+P3,P23,P22
+
+<simples>
+CS	prateleira1.png
+563	240	61	3
+P8,P15,P16,P19,P17,P6
+<simples>
+CS	prateleira1.png
+734	240	61	3
+_,P5,P20,P23,P18,P16
+
+
+<simples>
+CS	prateleira1.png
+50	125	61	3
+P19,_,P6,P7,P11,P9,P24,_,_
+<simples>
+CS	prateleira1.png
+221	125	61	3
+P7,P24,P9,P4,P5,_,P25,P25,P23
+
+<esgotavel>
+CS	prateleira2.png
+CMA	prateleira_porta.png	4	4	3
+392	125	37	1
+P20,P24,P1
+
+<simples>
+CS	prateleira1.png
+563	125	61	3
+P21,_,P21,P7,P5,_
+<simples>
+CS	prateleira1.png
+734	125	61	3
+P10,P10,_,P12,P20,P2
+
+
+<simples>
+CS	prateleira1.png
+50	10	61	3
+P1,_,P25,P21,_,P4,_,P22,_
+<simples>
+CS	prateleira1.png
+221	10	61	3
+P18,_,P3,P11,P12,P13
+
+<esgotavel>
+CS	prateleira2.png
+CMA	prateleira_porta.png	4	4	3
+392	10	37	1
+P17,P18,P1
+
+<simples>
+CS	prateleira1.png
+563	10	61	3
+P2,_,P3,P11,P12,P13
+<simples>
+CS	prateleira1.png
+734	10	61	3
+P4,_,P2,P14,_,P15,_,P22,_
