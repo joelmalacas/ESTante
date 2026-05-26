@@ -12,6 +12,9 @@ public class PrateleiraInfo {
     private PrateleiraEmpilhavel pempilhavel;
     private PrateleiraSequencia psequencia;
     private PrateleiraPorta pporta;
+    private PrateleiraEsgotavel pesgotavel;
+    private PrateleiraCongeladora pcongeladora;
+    private PrateleiraSlot pslot;
 
     public PrateleiraInfo(PrateleiraSimples psimples) {
         this.psimples = Objects.requireNonNull(psimples);
@@ -38,6 +41,30 @@ public class PrateleiraInfo {
         categoria = CategoriaPrateleira.PORTA;
     }
 
+    public PrateleiraInfo(PrateleiraEsgotavel p) {
+        if (p == null)
+            throw new IllegalArgumentException("Prateleira null");
+
+        categoria = CategoriaPrateleira.ESGOTAVEL;
+        pesgotavel = p;
+    }
+
+    public PrateleiraInfo(PrateleiraCongeladora p) {
+        if (p == null)
+            throw new IllegalArgumentException("Prateleira null");
+
+        categoria = CategoriaPrateleira.CONGELADORA;
+        pcongeladora = p;
+    }
+
+    public PrateleiraInfo(PrateleiraSlot p) {
+        if (p == null)
+            throw new IllegalArgumentException("Prateleira null");
+
+        categoria = CategoriaPrateleira.SLOT;
+        pslot = p;
+    }
+
     public CategoriaPrateleira getCategoria() {
         return categoria;
     }
@@ -60,6 +87,18 @@ public class PrateleiraInfo {
 
     public PrateleiraPorta getPorta() {
         return pporta;
+    }
+
+    public PrateleiraEsgotavel getEsgotavel() {
+        return pesgotavel;
+    }
+
+    public PrateleiraCongeladora getCongeladora(){
+        return pcongeladora;
+    }
+
+    public PrateleiraSlot getSlot() {
+        return pslot;
     };
 
 }
