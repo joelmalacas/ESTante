@@ -5,9 +5,7 @@ import java.awt.Rectangle;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.util.List;
 import javax.imageio.ImageIO;
-
 import mundo.*;
 import prateleira.*;
 import prof.jogos2D.image.ComponenteAnimado;
@@ -82,6 +80,9 @@ public class NivelReader {
 						break;
 					case "<slot>":
 						lerSlot(mundo, in);
+						break;
+					case "<teleportadora>":
+						lerTeleportadora(mundo, in);
 						break;
 				}
 			}
@@ -186,7 +187,8 @@ public class NivelReader {
 		int capacidade = Integer.parseInt(posInfo[3]);
 		int produtos[] = lerProdutos(in.readLine());
 		// TODO FEITO preparar e adicionar ao mundo
-		PrateleiraCongeladora pc = new PrateleiraCongeladora(p, cv, gelo, capacidade, linhaBase, produtoLarg, produtoAlt);
+		PrateleiraCongeladora pc = new PrateleiraCongeladora(p, cv, gelo, capacidade, linhaBase, produtoLarg,
+				produtoAlt);
 		mundo.prepararPrateleira(new PrateleiraInfo(pc), produtos);
 	}
 
@@ -243,8 +245,38 @@ public class NivelReader {
 		Rectangle areaBotao = new Rectangle(xBotao, yBotao, largBotao, altBotao);
 		int produtos[] = lerProdutos(in.readLine());
 		// TODO FEITO preparar e adicionar ao mundo
-		PrateleiraSlot ps = new PrateleiraSlot(p, cv, animRodar, capacidade, linhaBase, produtoLarg, produtoAlt, areaBotao);
+		PrateleiraSlot ps = new PrateleiraSlot(p, cv, animRodar, capacidade, linhaBase, produtoLarg, produtoAlt,
+				areaBotao);
 		mundo.prepararPrateleira(new PrateleiraInfo(ps), produtos);
+	}
+
+	private void lerTeleportadora(Mundo mundo, BufferedReader in)
+			throws IOException {
+
+		ComponenteVisual cv = lerComponenteVisual(in);
+
+		String posInfo[] = in.readLine().split("\t");
+
+		Point p = lerPosicao(posInfo[0], posInfo[1]);
+
+		int linhaBase = Integer.parseInt(posInfo[2]);
+		int capacidade = Integer.parseInt(posInfo[3]);
+		int tempoTroca = Integer.parseInt(posInfo[4]);
+
+		int produtos[] = lerProdutos(in.readLine());
+
+		PrateleiraTeleportadora pt = new PrateleiraTeleportadora(
+				p,
+				cv,
+				capacidade,
+				linhaBase,
+				produtoLarg,
+				produtoAlt,
+				tempoTroca);
+
+		mundo.prepararPrateleira(
+				new PrateleiraInfo(pt),
+				produtos);
 	}
 
 	/**

@@ -15,6 +15,7 @@ public class PrateleiraInfo {
     private PrateleiraEsgotavel pesgotavel;
     private PrateleiraCongeladora pcongeladora;
     private PrateleiraSlot pslot;
+    private PrateleiraTeleportadora pteleportadora;
 
     public PrateleiraInfo(PrateleiraSimples psimples) {
         this.psimples = Objects.requireNonNull(psimples);
@@ -65,6 +66,11 @@ public class PrateleiraInfo {
         pslot = p;
     }
 
+    public PrateleiraInfo(PrateleiraTeleportadora p) {
+        this.pteleportadora = p;
+        this.categoria = CategoriaPrateleira.TELEPORTADORA;
+    }
+
     public CategoriaPrateleira getCategoria() {
         return categoria;
     }
@@ -93,12 +99,16 @@ public class PrateleiraInfo {
         return pesgotavel;
     }
 
-    public PrateleiraCongeladora getCongeladora(){
+    public PrateleiraCongeladora getCongeladora() {
         return pcongeladora;
     }
 
     public PrateleiraSlot getSlot() {
         return pslot;
+    }
+
+    public PrateleiraTeleportadora getTeleportadora() {
+        return pteleportadora;
     };
 
 }

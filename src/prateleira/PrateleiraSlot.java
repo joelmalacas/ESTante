@@ -15,6 +15,8 @@ public class PrateleiraSlot extends PrateleiraSimples {
 
     public PrateleiraSlot(Point p, ComponenteVisual cv, ComponenteAnimado animRodar, int capacidade, int linhaBase, int produtoLarg, int produtoAlt, Rectangle areaBotao) {
         super(p, cv, capacidade, linhaBase, produtoLarg, produtoAlt);
+        if (areaBotao == null)
+            throw new IllegalArgumentException("Área botão inválida");
         this.animRodar = animRodar;
         this.areaBotao = areaBotao;
     }
@@ -24,6 +26,7 @@ public class PrateleiraSlot extends PrateleiraSimples {
             embaralhar();
             return null;
         }
+        
         return super.processaClique(pos);
     }
 

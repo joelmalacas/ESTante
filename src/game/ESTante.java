@@ -112,13 +112,13 @@ public class ESTante extends JFrame {
 	 */
 	private void lerConfiguracoesIniciais() {
 		// TODO FEITO fazer a leitura do ficheiro de pontuações : ficheiroRecords
-		try{
+		try {
 			records = nl.lerConfiguracoesIniciais(ficheiroRecords);
 			numNiveis = records.getNumNiveis();
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-    }
+	}
 
 	/** Gravar os recordes */
 	private void gravarRecords() {
@@ -218,6 +218,18 @@ public class ESTante extends JFrame {
 					case SEQUENCIA:
 						produtoSel = prat.getSequencia().emprestarProdutoAt(rato);
 						break;
+					case ESGOTAVEL:
+						produtoSel = prat.getEsgotavel().emprestarProdutoAt(rato);
+						break;
+					case CONGELADORA:
+						produtoSel = prat.getCongeladora().emprestarProdutoAt(rato);
+						break;
+					case SLOT:
+						produtoSel = prat.getSlot().emprestarProdutoAt(rato);
+						break;
+					case TELEPORTADORA:
+						produtoSel = prat.getTeleportadora().emprestarProdutoAt(rato);
+						break;
 				}
 			}
 		}
@@ -281,6 +293,14 @@ public class ESTante extends JFrame {
 				return prat.getPorta().podeAceitarProduto(p);
 			case SEQUENCIA:
 				return prat.getSequencia().podeReceber(p);
+			case ESGOTAVEL:
+				return prat.getEsgotavel().podeReceber(p);
+			case CONGELADORA:
+				return prat.getCongeladora().podeReceber(p);
+			case SLOT:
+				return prat.getSlot().podeReceber(p);
+			case TELEPORTADORA:
+				return prat.getTeleportadora().podeReceber(p);
 		}
 		return false;
 	}
@@ -302,6 +322,18 @@ public class ESTante extends JFrame {
 			case SEQUENCIA:
 				prat.getSequencia().removeProduto(p);
 				break;
+			case ESGOTAVEL:
+				prat.getEsgotavel().removeProduto(p);
+				break;
+			case CONGELADORA:
+				prat.getCongeladora().removeProduto(p);
+				break;
+			case SLOT:
+				prat.getSlot().removeProduto(p);
+				break;
+			case TELEPORTADORA:
+				prat.getTeleportadora().removeProduto(p);
+				break;
 		}
 	}
 
@@ -322,6 +354,18 @@ public class ESTante extends JFrame {
 			case SEQUENCIA:
 				prat.getSequencia().receberProduto(produtoSel, pos);
 				break;
+			case ESGOTAVEL:
+				prat.getEsgotavel().receberProduto(produtoSel, pos);
+				break;
+			case CONGELADORA:
+				prat.getCongeladora().receberProduto(produtoSel, pos);
+				break;
+			case SLOT:
+				prat.getSlot().receberProduto(produtoSel, pos);
+				break;
+			case TELEPORTADORA:
+				prat.getTeleportadora().receberProduto(produtoSel, pos);
+				break;
 		}
 	}
 
@@ -341,6 +385,18 @@ public class ESTante extends JFrame {
 				break;
 			case SEQUENCIA:
 				prat.getSequencia().retomarProduto();
+				break;
+			case ESGOTAVEL:
+				prat.getEsgotavel().retomarProduto();
+				break;
+			case CONGELADORA:
+				prat.getCongeladora().retomarProduto();
+				break;
+			case SLOT:
+				prat.getSlot().retomarProduto();
+				break;
+			case TELEPORTADORA:
+				prat.getTeleportadora().retomarProduto();
 				break;
 		}
 	}
@@ -566,7 +622,7 @@ public class ESTante extends JFrame {
 				mundo.atualizar();
 				// vai atualizar todos os elementos do jogo
 				if (!finished) {
-					// TODO verificar se o round acabou com vitória
+					// TODO FEITO verificar se o round acabou com vitória
 					if (mundo.ganhou()) {
 						finished = true;
 						completouNivel = true;

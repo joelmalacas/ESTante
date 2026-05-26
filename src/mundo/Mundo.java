@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-
 import prateleira.PrateleiraInfo;
 import prateleira.Produto;
 import prof.jogos2D.efeito.Efeito;
@@ -67,6 +66,18 @@ public class Mundo {
 				case SEQUENCIA:
 					p.getSequencia().atualizar();
 					break;
+				case ESGOTAVEL:
+					p.getEsgotavel().atualizar();
+					break;
+				case CONGELADORA:
+					p.getCongeladora().atualizar();
+					break;
+				case SLOT:
+					p.getSlot().atualizar();
+					break;
+				case TELEPORTADORA:
+					p.getTeleportadora().atualizar();
+					break;
 			}
 		}
 		for (Efeito fx : fxs)
@@ -100,6 +111,20 @@ public class Mundo {
 					break;
 				case SEQUENCIA:
 					p.getSequencia().desenhar(g);
+					break;
+				case ESGOTAVEL:
+					p.getEsgotavel().desenhar(g);
+					break;
+
+				case CONGELADORA:
+					p.getCongeladora().desenhar(g);
+					break;
+
+				case SLOT:
+					p.getSlot().desenhar(g);
+					break;
+				case TELEPORTADORA:
+					p.getTeleportadora().desenhar(g);
 					break;
 			}
 		}
@@ -140,6 +165,22 @@ public class Mundo {
 					if (p.getSequencia().totalProdutos() != 0)
 						return false;
 					break;
+				case ESGOTAVEL:
+					if (p.getEsgotavel().totalProdutos() != 0)
+						return false;
+					break;
+				case CONGELADORA:
+					if (p.getCongeladora().totalProdutos() != 0)
+						return false;
+					break;
+				case SLOT:
+					if (p.getSlot().totalProdutos() != 0)
+						return false;
+					break;
+				case TELEPORTADORA:
+					if (p.getTeleportadora().totalProdutos() != 0)
+						return false;
+					break;
 			}
 		return true;
 	}
@@ -170,6 +211,19 @@ public class Mundo {
 				case SEQUENCIA:
 					totalLugares += p.getSequencia().espacoDisponivel();
 					break;
+				case ESGOTAVEL:
+					totalLugares += p.getEsgotavel().espacoDisponivel();
+					break;
+				case CONGELADORA:
+					totalLugares += p.getCongeladora().espacoDisponivel();
+					break;
+				case SLOT:
+					totalLugares += p.getSlot().espacoDisponivel();
+					break;
+				case TELEPORTADORA:
+					totalLugares += p.getTeleportadora().espacoDisponivel();
+					break;
+
 			}
 			if (totalLugares >= 2)
 				return false;
@@ -335,8 +389,23 @@ public class Mundo {
 						return p;
 					break;
 				case SEQUENCIA:
-
 					if (p.getSequencia().contemPonto(pos))
+						return p;
+					break;
+				case ESGOTAVEL:
+					if (p.getEsgotavel().contemPonto(pos))
+						return p;
+					break;
+				case CONGELADORA:
+					if (p.getCongeladora().contemPonto(pos))
+						return p;
+					break;
+				case SLOT:
+					if (p.getSlot().contemPonto(pos))
+						return p;
+					break;
+				case TELEPORTADORA:
+					if (p.getTeleportadora().contemPonto(pos))
 						return p;
 					break;
 			}
@@ -373,6 +442,22 @@ public class Mundo {
 				case SEQUENCIA:
 					if (p.getSequencia().contemPonto(pos))
 						return p.getSequencia().processaClique(pos);
+					break;
+				case ESGOTAVEL:
+					if (p.getEsgotavel().contemPonto(pos))
+						return p.getEsgotavel().processaClique(pos);
+					break;
+				case CONGELADORA:
+					if (p.getCongeladora().contemPonto(pos))
+						return p.getCongeladora().processaClique(pos);
+					break;
+				case SLOT:
+					if (p.getSlot().contemPonto(pos))
+						return p.getSlot().processaClique(pos);
+					break;
+				case TELEPORTADORA:
+					if (p.getTeleportadora().contemPonto(pos))
+						return p.getTeleportadora().processaClique(pos);
 					break;
 			}
 		}
@@ -482,6 +567,22 @@ public class Mundo {
 			case SEQUENCIA:
 				p.getSequencia().setupProdutos(prods);
 				p.getSequencia().setMundo(this);
+				break;
+			case ESGOTAVEL:
+				p.getEsgotavel().setupProdutos(prods);
+				p.getEsgotavel().setMundo(this);
+				break;
+			case CONGELADORA:
+				p.getCongeladora().setupProdutos(prods);
+				p.getCongeladora().setMundo(this);
+				break;
+			case SLOT:
+				p.getSlot().setupProdutos(prods);
+				p.getSlot().setMundo(this);
+				break;
+			case TELEPORTADORA:
+				p.getTeleportadora().setupProdutos(prods);
+				p.getTeleportadora().setMundo(this);
 				break;
 		}
 		prateleiras.add(p);
