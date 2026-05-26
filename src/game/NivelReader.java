@@ -134,7 +134,7 @@ public class NivelReader {
 		int linhaBase = Integer.parseInt(posInfo[2]);
 		int capacidade = Integer.parseInt(posInfo[3]);
 		int produtos[] = lerProdutos(in.readLine());
-		// TODO preparar e adicionar ao mundo
+		// TODO FEITO preparar e adicionar ao mundo
 		PrateleiraEsgotavel pe = new PrateleiraEsgotavel(p, cv, cvAnim, capacidade, linhaBase, produtoLarg, produtoAlt);
 		mundo.prepararPrateleira(new PrateleiraInfo(pe), produtos);
 	}
@@ -185,7 +185,7 @@ public class NivelReader {
 		int linhaBase = Integer.parseInt(posInfo[2]);
 		int capacidade = Integer.parseInt(posInfo[3]);
 		int produtos[] = lerProdutos(in.readLine());
-		// TODO preparar e adicionar ao mundo
+		// TODO FEITO preparar e adicionar ao mundo
 		PrateleiraCongeladora pc = new PrateleiraCongeladora(p, cv, gelo, capacidade, linhaBase, produtoLarg, produtoAlt);
 		mundo.prepararPrateleira(new PrateleiraInfo(pc), produtos);
 	}
@@ -242,7 +242,7 @@ public class NivelReader {
 		int altBotao = Integer.parseInt(posInfo[7]);
 		Rectangle areaBotao = new Rectangle(xBotao, yBotao, largBotao, altBotao);
 		int produtos[] = lerProdutos(in.readLine());
-		// TODO preparar e adicionar ao mundo
+		// TODO FEITO preparar e adicionar ao mundo
 		PrateleiraSlot ps = new PrateleiraSlot(p, cv, animRodar, capacidade, linhaBase, produtoLarg, produtoAlt, areaBotao);
 		mundo.prepararPrateleira(new PrateleiraInfo(ps), produtos);
 	}
