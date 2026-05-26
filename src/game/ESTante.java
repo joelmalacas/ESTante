@@ -111,7 +111,7 @@ public class ESTante extends JFrame {
 	 * nível
 	 */
 	private void lerConfiguracoesIniciais() {
-		// TODO fazer a leitura do ficheiro de pontuações : ficheiroRecords
+		// TODO FEITO fazer a leitura do ficheiro de pontuações : ficheiroRecords
 		try{
 			records = nl.lerConfiguracoesIniciais(ficheiroRecords);
 			numNiveis = records.getNumNiveis();
@@ -122,7 +122,7 @@ public class ESTante extends JFrame {
 
 	/** Gravar os recordes */
 	private void gravarRecords() {
-		// TODO gravar o ficheiro das pontuações : ficheiroRecords
+		// TODO FEITO gravar o ficheiro das pontuações : ficheiroRecords
 		try {
 			nl.gravarConfiguracoes(ficheiroRecords, records);
 		} catch (Exception e) {
@@ -495,7 +495,7 @@ public class ESTante extends JFrame {
 	 * @return true se bateu o record
 	 */
 	private boolean bateuJogadas() {
-		// TODO implementar este método
+		// TODO FEITO implementar este método
 		return records.getJogadas(nivel) == 0 || numeroJogadas < records.getJogadas(nivel);
 	}
 
@@ -505,7 +505,7 @@ public class ESTante extends JFrame {
 	 * @return true se bateu o record
 	 */
 	private boolean bateuTempo() {
-		// TODO implementar este método
+		// TODO FEITO implementar este método
 		return records.getTempo(nivel) == 0 || tempoJogo() < records.getTempo(nivel);
 	}
 
@@ -516,7 +516,7 @@ public class ESTante extends JFrame {
 	 * @return o record de tempo do nível indicado
 	 */
 	private long getRecordTempo(int nivel) {
-		// TODO implementar este método
+		// TODO FEITO implementar este método
 		return records.getTempo(nivel);
 	}
 
@@ -527,7 +527,7 @@ public class ESTante extends JFrame {
 	 * @return o record de jogadas do nível indicado
 	 */
 	private int getRecordJogadas(int nivel) {
-		// TODO implementar este método
+		// TODO FEITO implementar este método
 		return records.getJogadas(nivel);
 	}
 
@@ -539,7 +539,7 @@ public class ESTante extends JFrame {
 	 * @param jogadas     o novo record
 	 */
 	private void updateRecordJogadas(int nivelBatido, int jogadas) {
-		// TODO implementar este método
+		// TODO FEITO implementar este método
 		records.setJogadas(nivelBatido, jogadas);
 	}
 
@@ -551,7 +551,7 @@ public class ESTante extends JFrame {
 	 * @param tempo       o novo record
 	 */
 	private void updateRecordTempo(int nivelBatido, long tempo) {
-		// TODO implementar este método
+		// TODO FEITO implementar este método
 		records.setTempo(nivelBatido, tempo);
 	}
 
