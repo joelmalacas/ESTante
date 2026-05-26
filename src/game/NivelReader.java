@@ -91,6 +91,30 @@ public class NivelReader {
 		}
 	}
 
+	public Records lerConfiguracoesIniciais(String ficheiroRecords) throws IOException {
+		try (BufferedReader in = new BufferedReader(new FileReader(ficheiroRecords))) {
+			int numNiveis = Integer.parseInt(in.readLine().trim());
+			Records records = new Records(numNiveis);
+			for (int i = 1; i <= numNiveis; i++) {
+				String[] partes = in.readLine().split(",");
+				records.setTempo(i, Long.parseLong(partes[0]));
+				records.setJogadas(i, Integer.parseInt(partes[1]));
+			}
+			return records;
+		}
+	}
+
+	public void gravarConfiguracoes(String ficheiroRecords, Records records) throws IOException {
+		try (BufferedWriter out = new BufferedWriter(new FileWriter(ficheiroRecords))) {
+			out.write(String.valueOf(records.getNumNiveis()));
+			out.newLine();
+			for (int i = 1; i <= records.getNumNiveis(); i++) {
+				out.write(records.getTempo(i) + "," + records.getJogadas(i));
+				out.newLine();
+			}
+		}
+	}
+
 	private void lerSimples(Mundo mundo, BufferedReader in) throws IOException {
 		ComponenteVisual cv = lerComponenteVisual(in);
 		String posInfo[] = in.readLine().split("\t");

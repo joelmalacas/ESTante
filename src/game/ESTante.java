@@ -92,8 +92,8 @@ public class ESTante extends JFrame {
 	});
 	private EfeitoMostrarJogada mostrandoJogada;
 
-	private long[] recordsTempos;
-	private int[] recordsJogadas;
+	private Records records;
+	NivelReader nl = new NivelReader();
 
 	/**
 	 * Inicializa o jogo e começa no nível 1
@@ -112,16 +112,10 @@ public class ESTante extends JFrame {
 	 */
 	private void lerConfiguracoesIniciais() {
 		// TODO fazer a leitura do ficheiro de pontuações : ficheiroRecords
-		try (BufferedReader in = new BufferedReader(new FileReader(ficheiroRecords))) {
-			numNiveis = Integer.parseInt(in.readLine().trim());
-			recordsTempos = new long[numNiveis + 1];
-			recordsJogadas = new int[numNiveis + 1];
-			for (int i = 1; i <= numNiveis; i++) {
-				String[] partes = in.readLine().split(",");
-				recordsTempos[i] = Long.parseLong(partes[0]);
-				recordsJogadas[i] = Integer.parseInt(partes[1]);
-			}
-		} catch (IOException e) {
+		try{
+			records = nl.lerConfiguracoesIniciais(ficheiroRecords);
+			numNiveis = records.getNumNiveis();
+		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
     }
@@ -129,14 +123,9 @@ public class ESTante extends JFrame {
 	/** Gravar os recordes */
 	private void gravarRecords() {
 		// TODO gravar o ficheiro das pontuações : ficheiroRecords
-		try (BufferedWriter out = new BufferedWriter(new FileWriter(ficheiroRecords))) {
-			out.write(String.valueOf(numNiveis));
-			out.newLine();
-			for (int i = 1; i <= numNiveis; i++) {
-				out.write(recordsTempos[i] + "," + recordsJogadas[i]);
-				out.newLine();
-			}
-		} catch (IOException e) {
+		try {
+			nl.gravarConfiguracoes(ficheiroRecords, records);
+		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
 	}
@@ -507,7 +496,7 @@ public class ESTante extends JFrame {
 	 */
 	private boolean bateuJogadas() {
 		// TODO implementar este método
-		return recordsJogadas[nivel] == 0 || numeroJogadas < recordsJogadas[nivel];
+		return records.getJogadas(nivel) == 0 || numeroJogadas < records.getJogadas(nivel);
 	}
 
 	/**
@@ -517,7 +506,7 @@ public class ESTante extends JFrame {
 	 */
 	private boolean bateuTempo() {
 		// TODO implementar este método
-		return recordsTempos[nivel] == 0 || tempoJogo() < recordsTempos[nivel];
+		return records.getTempo(nivel) == 0 || tempoJogo() < records.getTempo(nivel);
 	}
 
 	/**
@@ -528,7 +517,7 @@ public class ESTante extends JFrame {
 	 */
 	private long getRecordTempo(int nivel) {
 		// TODO implementar este método
-		return recordsTempos[nivel];
+		return records.getTempo(nivel);
 	}
 
 	/**
@@ -539,7 +528,7 @@ public class ESTante extends JFrame {
 	 */
 	private int getRecordJogadas(int nivel) {
 		// TODO implementar este método
-		return recordsJogadas[nivel];
+		return records.getJogadas(nivel);
 	}
 
 	/**
@@ -551,7 +540,7 @@ public class ESTante extends JFrame {
 	 */
 	private void updateRecordJogadas(int nivelBatido, int jogadas) {
 		// TODO implementar este método
-		recordsJogadas[nivelBatido] = jogadas;
+		records.setJogadas(nivelBatido, jogadas);
 	}
 
 	/**
@@ -563,7 +552,7 @@ public class ESTante extends JFrame {
 	 */
 	private void updateRecordTempo(int nivelBatido, long tempo) {
 		// TODO implementar este método
-		recordsTempos[nivelBatido] = tempo;
+		records.setTempo(nivelBatido, tempo);
 	}
 
 	/**
