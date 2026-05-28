@@ -1,0 +1,73 @@
+fundo1.jpg
+produtos.png	50	100
+20	3
+
+<teleportadora>
+CS	prateleira1.png
+80	125	61	3	120
+P1,P2,P3,P4,P5,_
+
+<teleportadora>
+CS	prateleira1.png
+251	125	61	3	150
+P6,P7,P8,P9,P10,_
+
+<teleportadora>
+CS	prateleira1.png
+422	125	61	3	130
+P11,P12,P1,P13,P14,_
+
+<teleportadora>
+CS	prateleira1.png
+593	125	61	3	110
+P15,P16,P17,P2,P18,_
+
+<simples>
+CS	prateleira1.png
+80	10	61	3
+P19,P3,P20,_,P4,_
+
+<simples>
+CS	prateleira1.png
+251	10	61	3
+P5,P6,_,P19,P7,_
+
+<simples>
+CS	prateleira1.png
+422	10	61	3
+P8,P20,P9,_,P10,_
+
+<simples>
+CS	prateleira1.png
+593	10	61	3
+P11,P12,_,P13,P14,_
+
+<simples>
+CS	prateleira1.png
+764	10	61	3
+P15,_,P16,P17,P18,_
+
+<simples>
+CS	prateleira1.png
+80	300	61	3
+P19,P20,_,P1,_,P2
+
+<simples>
+CS	prateleira1.png
+251	300	61	3
+P3,_,P4,P5,_,P6
+
+<simples>
+CS	prateleira1.png
+422	300	61	3
+P7,P8,_,P9,P10,_
+
+<simples>
+CS	prateleira1.png
+593	300	61	3
+P11,_,P12,P13,_,P14
+
+<simples>
+CS	prateleira1.png
+764	300	61	3
+P15,P16,_,P17,P18,_
