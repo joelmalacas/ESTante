@@ -336,6 +336,12 @@ public class Mundo {
 			case SEQUENCIA:
 				p.getSequencia().setMundo(this);
 				break;
+			case SLOT:
+				p.getSlot().setMundo(this);
+				break;
+			case TELEPORTADORA:
+				p.getTeleportadora().setMundo(this);
+				break;
 		}
 	}
 

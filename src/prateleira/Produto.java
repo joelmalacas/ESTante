@@ -67,6 +67,10 @@ public class Produto {
                 return prateleira.getPorta().getPosicaoProduto(this);
             case SEQUENCIA:
                 return prateleira.getSequencia().getPosicaoProduto(this);
+            case SLOT:
+                return prateleira.getSlot().getPosicaoProduto(this);
+            case TELEPORTADORA:
+                return prateleira.getTeleportadora().getPosicaoProduto(this);
         }
         return null;
     }
