@@ -39,13 +39,13 @@ public class PrateleiraSlot extends PrateleiraSimples {
         List<Produto> prods = new ArrayList<>(getProdutos());
         int totalPorColuna = prods.size() / capacidade;
 
-        for (int row = 0; row < totalPorColuna; row++) {
-            List<Produto> linha = new ArrayList<>();
-            for (int col = 0; col < capacidade; col++)
-                linha.add(prods.get(col + row * capacidade));
-            Collections.shuffle(linha);
-            for (int col = 0; col < capacidade; col++)
-                prods.set(col + row * capacidade, linha.get(col));
+        for (int col = 0; col < capacidade; col++) {
+            List<Produto> coluna = new ArrayList<>();
+            for (int row = 0; row < totalPorColuna; row++)
+                coluna.add(prods.get(col + row * capacidade));
+            Collections.shuffle(coluna);
+            for (int row = 0; row < totalPorColuna; row++)
+                prods.set(col + row * capacidade, coluna.get(row));
         }
         setupProdutos(prods);
     }
