@@ -42,10 +42,6 @@ public class EfeitoTeleporte extends EfeitoComDuracao {
     }
 
     @Override
-    protected void fazerAtualizacao(int ciclo) {
-    }
-
-    @Override
     public void desenhar(Graphics2D g) {
         if (terminou())
             return;

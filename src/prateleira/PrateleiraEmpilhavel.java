@@ -21,14 +21,6 @@ import prof.jogos2D.image.ComponenteVisual;
 
 public class PrateleiraEmpilhavel extends PrateleiraSimples {
 
-    private int capacidade;
-    private ArrayList<Produto> produtos = new ArrayList<>();
-    private int indexEmprestado = -1;
-    private int offsetBase;
-    private Rectangle areaProdutos[];
-    private int totalProdutos = 0, totalFrente = 0;
-    private Mundo mundo;
-
     private int yAtual = 0;
     private int andar = 0;
     private Torre torre;
