@@ -25,12 +25,12 @@ public class PrateleiraSlot extends PrateleiraSimples {
     }
 
     public Produto processaClique(Point pos) {
-        if (areaBotao.contains(pos)) {
-            embaralhar();
+        Point posLocal = new Point(pos.x - getPosicao().x, pos.y - getPosicao().y);
+        if (areaBotao.contains(posLocal)) {
             getMundo().addFx(new EfeitoSlot(animRodar.clone(), getPosicao(), DURACAO_EFEITO));
+            embaralhar();
             return null;
         }
-
         return super.processaClique(pos);
     }
 
