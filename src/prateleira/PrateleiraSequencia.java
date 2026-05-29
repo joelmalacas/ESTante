@@ -51,7 +51,7 @@ public class PrateleiraSequencia extends PrateleiraSimples {
 
     public Produto processaClique(Point pos) {
         if (aberta)
-            super.processaClique(pos);
+            return super.processaClique(pos);
         if (!alterando)
             comutador.abrirProxima();
         return null;
