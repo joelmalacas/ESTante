@@ -5,6 +5,8 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import efeito.EfeitoSlot;
 import prof.jogos2D.image.ComponenteAnimado;
 import prof.jogos2D.image.ComponenteVisual;
 
@@ -12,6 +14,7 @@ public class PrateleiraSlot extends PrateleiraSimples {
 
     private ComponenteAnimado animRodar;
     private Rectangle areaBotao;
+    private static final int DURACAO_EFEITO = 40;
 
     public PrateleiraSlot(Point p, ComponenteVisual cv, ComponenteAnimado animRodar, int capacidade, int linhaBase, int produtoLarg, int produtoAlt, Rectangle areaBotao) {
         super(p, cv, capacidade, linhaBase, produtoLarg, produtoAlt);
@@ -24,9 +27,10 @@ public class PrateleiraSlot extends PrateleiraSimples {
     public Produto processaClique(Point pos) {
         if (areaBotao.contains(pos)) {
             embaralhar();
+            getMundo().addFx(new EfeitoSlot(animRodar.clone(), getPosicao(), DURACAO_EFEITO));
             return null;
         }
-        
+
         return super.processaClique(pos);
     }
 
@@ -35,13 +39,13 @@ public class PrateleiraSlot extends PrateleiraSimples {
         List<Produto> prods = new ArrayList<>(getProdutos());
         int totalPorColuna = prods.size() / capacidade;
 
-        for (int col = 0; col < capacidade; col++) {
-            List<Produto> coluna = new ArrayList<>();
-            for (int row = 0; row < totalPorColuna; row++)
-                coluna.add(prods.get(col + row * capacidade));
-            Collections.shuffle(coluna);
-            for (int row = 0; row < totalPorColuna; row++)
-                prods.set(col + row * capacidade, coluna.get(row));
+        for (int row = 0; row < totalPorColuna; row++) {
+            List<Produto> linha = new ArrayList<>();
+            for (int col = 0; col < capacidade; col++)
+                linha.add(prods.get(col + row * capacidade));
+            Collections.shuffle(linha);
+            for (int col = 0; col < capacidade; col++)
+                prods.set(col + row * capacidade, linha.get(col));
         }
         setupProdutos(prods);
     }

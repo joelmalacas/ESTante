@@ -342,6 +342,12 @@ public class Mundo {
 			case TELEPORTADORA:
 				p.getTeleportadora().setMundo(this);
 				break;
+			case CONGELADORA:
+				p.getCongeladora().setMundo(this);
+				break;
+			case ESGOTAVEL:
+				p.getEsgotavel().setMundo(this);
+				break;
 		}
 	}
 

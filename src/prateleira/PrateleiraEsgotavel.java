@@ -24,7 +24,9 @@ public class PrateleiraEsgotavel extends PrateleiraSimples {
         super.removeProduto(p);
         if (totalProdutos() == 0) {
             esgotada = true;
-            animFechar.setAnim(0);
+            animFechar.setCiclico(false);
+            animFechar.reset();
+            animFechar.setAnim(1);
         }
     }
 }

@@ -1,6 +1,7 @@
 package prateleira;
 
-import java.awt.Point;
+import java.awt.*;
+
 import prof.jogos2D.image.ComponenteVisual;
 
 public class PrateleiraCongeladora extends PrateleiraSimples {
@@ -12,10 +13,22 @@ public class PrateleiraCongeladora extends PrateleiraSimples {
         this.gelo = gelo;
     }
 
+    @Override
+    public void desenhar(Graphics2D g) {
+        super.desenhar(g);
+        for (int i = 0; i < getCapacidade(); i++) {
+            Produto p = getProdutos().get(i);
+            if (p != Produto.VAZIO)
+                gelo.desenhar(g, getPosicaoProduto(p));
+        }
+    }
+
+    @Override
     public Produto emprestarProdutoAt(Point pos) {
         return null;
     }
 
+    @Override
     public boolean podeReceber(Produto p) {
         return super.podeReceber(p);
     }

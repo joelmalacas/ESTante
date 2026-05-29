@@ -101,7 +101,7 @@ public class ESTante extends JFrame {
 	public void play() {
 		criarImagemJogo();
 		lerConfiguracoesIniciais();
-		setNivel(10);
+		setNivel(9);
 		// no fim está tudo pronto para mandar desenhar o mundo
 		zonaJogo.repaint();
 	}
